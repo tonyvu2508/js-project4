@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 8px;
+    }
+    .container {
+        width: 98%;
+        margin: auto;
+    }
+    .header {
+        height: 4rem;
+        position: sticky;
+        top: 0;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+    }
+    .modal {
+        width: 80%;
+        background-color: white;
+        z-index: 1;
+        display: none;
+        position: fixed;
+        top: 4%;
+        height: 5rem;
+        margin: 1rem 0rem;
+        border: 1px solid black;
+        justify-content: space-between;
+    }
+    .modal>* {
+        height: 75%;
+        margin: auto 0;
+    }
+    .modal input {
+        font-size: 2rem;
+    }
+    .modal span {
+        font-size: 2rem;
+    }
+    .btnClose {
+        width: 3rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    input {
+        height: 100%;
+    }
+    .content {
+        height: 18em;
+        margin-top: .5rem;
+        background-color: #f6f6f7;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content__image {
+        /* background-image: url("https://www.siliconrepublic.com/wp-content/uploads/2020/03/BOO_3353_2.jpg"); */
+        background-size: cover;
+        width: 30%;
+    }
+    .content__image>img {
+        height: 100%;
+        width: 100%;
+    }
+    .content__text {
+        width: 68%;
+    }
+    .content__text--header {
+        margin-bottom: 1rem;
+        max-height: 40%;
+    }
+    h2>a {
+        font-size: 2rem;
+    }
+    .content__text--date-time {
+        margin-bottom: 1rem;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    .content__text--short-content {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-height: 40%;
+    }
+    footer {
+        height: 10rem;
+        background-color: aquamarine;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h2>a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .modal {
+        width: 98%;
+        background-color: white;
+        z-index: 1;
+        display: none;
+        position: fixed;
+        top: 4%;
+        height: 5rem;
+        margin: 1rem 0rem;
+        border: 1px solid black;
+        justify-content: space-between;
+    }
+    .modal>* {
+        height: 75%;
+        margin: auto 0;
+    }
+    .modal input {
+        font-size: 1.5rem;
+    }
+    .modal span {
+        font-size: 1.5rem;
+    }
+    .btnSearch {
+        width: 5rem;
+    }
+    .btnClose {
+        width: 4rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+    .header {
+        height: 4rem;
+        position: sticky;
+        top: 0;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+    }
+    .modal {
+        width: 80%;
+        background-color: white;
+        z-index: 1;
+        display: none;
+        position: fixed;
+        top: 4%;
+        height: 5rem;
+        margin: 1rem 0rem;
+        border: 1px solid black;
+        justify-content: space-between;
+    }
+    .modal>* {
+        height: 75%;
+        margin: auto 0;
+    }
+    .modal input {
+        font-size: 2rem;
+    }
+    .modal span {
+        font-size: 2rem;
+    }
+    .btnClose {
+        width: 3rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    input {
+        height: 100%;
+    }
+    .content {
+        height: 18em;
+        margin-top: .5rem;
+        background-color: #f6f6f7;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content__image {
+        /* background-image: url("https://www.siliconrepublic.com/wp-content/uploads/2020/03/BOO_3353_2.jpg"); */
+        background-size: cover;
+        width: 30%;
+    }
+    .content__image>img {
+        height: 100%;
+        width: 100%;
+    }
+    .content__text {
+        width: 68%;
+    }
+    .content__text--header {
+        margin-bottom: 1rem;
+        max-height: 40%;
+    }
+    h2>a {
+        font-size: 2rem;
+    }
+    .content__text--date-time {
+        margin-bottom: 1rem;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    .content__text--short-content {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-height: 40%;
+    }
+    footer {
+        height: 10rem;
+        background-color: aquamarine;
+    }
+}
+
+.content-wrapper {
+    margin-bottom: .5rem;
+}
+
+
+/* Loading Tham khảo: https://dev.to/vaishnavme/displaying-loading-animation-on-fetch-api-calls-1e5m */
+
+#loading {
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+    position: fixed;
+    top: 20%;
+    left: 48%;
+}
+
+#loading.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
